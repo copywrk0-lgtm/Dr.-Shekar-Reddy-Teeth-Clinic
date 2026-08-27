@@ -56,9 +56,9 @@ export default function Hero() {
         muted={muted}
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/90 via-teal-ink/60 to-teal-deep/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/80 via-teal-ink/50 to-teal-deep/60" />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1320px] flex-col justify-center px-5 pb-10 pt-28 sm:px-6 lg:pt-32">
         <div className="grid items-center gap-10 lg:grid-cols-12">
@@ -73,7 +73,7 @@ export default function Hero() {
                 {clinic.reviews} ratings
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/12 px-3 py-1.5 font-semibold">
-                <Clock size={13} /> Open all 7 days
+                <Clock size={13} /> Open 7 days
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-white/12 px-3 py-1.5 font-semibold">
                 <MapPin size={13} /> Neelasandra, Bengaluru
@@ -88,9 +88,9 @@ export default function Hero() {
             >
               Dental care that
               <br />
-              <span className="text-mint">doesn't hurt</span> your
+              <span className="text-mint">gentle on your teeth</span>
               <br />
-              teeth or your wallet.
+              and your wallet.
             </motion.h1>
 
             <motion.p
@@ -100,9 +100,8 @@ export default function Hero() {
               className="mt-6 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
             >
               Fillings, root canals, extractions, caps, dentures, implants and
-              braces — handled by our full panel of doctors on Bazaar Street,
-              Neelasandra. Rates displayed openly, treatment explained before we
-              begin.
+              braces — with care from our dental team on Bazaar Street,
+              Neelasandra. Treatment explained clearly before we begin.
             </motion.p>
 
             <motion.div
@@ -116,7 +115,7 @@ export default function Hero() {
                 onClick={openBook}
                 className="rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-teal-deep shadow-lg transition hover:bg-mint"
               >
-                Book an appointment
+                Request an appointment
               </button>
               <a
                 href={`tel:${clinic.phoneRaw}`}
@@ -183,7 +182,7 @@ export default function Hero() {
               </div>
               <div className="mt-4 rounded-2xl bg-white p-4 text-ink">
                 <p className="text-xs font-semibold uppercase tracking-wider text-teal">
-                  Today's timings
+                  Clinic hours
                 </p>
                 <p className="mt-1 text-sm font-bold">{clinic.hoursWeek}</p>
                 <p className="text-sm text-ink/60">{clinic.hoursSun}</p>

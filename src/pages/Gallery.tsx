@@ -27,9 +27,7 @@ export default function Gallery() {
             See the place before you visit.
           </Heading>
           <p className="mt-4 max-w-xl text-white/75">
-            Two treatment rooms, a front desk that keeps your records, and a
-            waiting area with our qualifications and treatment board on the
-            wall.
+            See the clinic environment, treatment spaces and patient-facing areas before you visit.
           </p>
         </div>
       </section>
@@ -68,7 +66,7 @@ export default function Gallery() {
           />
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Btn onClick={openBook}>Book an appointment</Btn>
+          <Btn onClick={openBook}>Request an appointment</Btn>
           <Btn variant="outline" href={clinic.maps}>
             Get directions
           </Btn>

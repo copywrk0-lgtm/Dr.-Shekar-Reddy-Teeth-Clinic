@@ -16,7 +16,7 @@ npm run check
 npm run preview
 ```
 
-Before launch, replace `YOUR-PRODUCTION-DOMAIN.example` in `index.html`, `public/robots.txt`, `public/sitemap.xml`, `public/` metadata and deployment documentation.
+Before launch, replace `dentalclinicdrshekhar.vercel.app` in `index.html`, `public/robots.txt`, `public/sitemap.xml`, `public/` metadata and deployment documentation.
 
 ## Lead capture
 

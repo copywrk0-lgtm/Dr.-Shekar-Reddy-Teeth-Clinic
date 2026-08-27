@@ -35,7 +35,7 @@ export default function Footer() {
               onClick={openBook}
               className="mt-6 rounded-full bg-white px-5 py-3 text-sm font-semibold text-teal-deep"
             >
-              Book an appointment
+              Request an appointment
             </button>
           </div>
 

@@ -236,13 +236,13 @@ export default function Home() {
             <div className="lg:col-span-5">
               <Eyebrow>Patient reviews</Eyebrow>
               <Heading className="mt-4">
-                Rated <span className="text-teal">{clinic.rating}★</span> by over 1,100
-                patients.
+                Rated <span className="text-teal">{clinic.rating}★</span> with 1,100+
+                patient ratings.
               </Heading>
               <p className="mt-4 text-ink/65">
-                Public reviews highlight welcoming staff, clear explanations and comfortable care. Read the current listing before making a decision.
+                Current public listings show a 4.9 rating and 1,100+ patient ratings. Read the live listing for the latest reviews and experiences.
               </p>
-              <a href={clinic.reviewsUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex text-sm font-bold text-teal hover:underline">See current public reviews ↗</a>
+              <a href={clinic.reviewsUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex text-sm font-bold text-teal hover:underline">See current Google reviews ↗</a>
               <div className="mt-6 flex gap-2">
                 {reviews.map((r, i) => (
                   <button

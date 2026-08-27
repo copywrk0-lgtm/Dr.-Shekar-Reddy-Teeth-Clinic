@@ -142,7 +142,7 @@ export default function About() {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Btn variant="white" onClick={openBook}>
-              Book an appointment
+              Request an appointment
             </Btn>
             <Btn variant="white" onClick={() => go("team")}>
               Meet our doctors

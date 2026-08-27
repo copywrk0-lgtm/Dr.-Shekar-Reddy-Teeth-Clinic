@@ -48,17 +48,17 @@ export const clinic = {
   addressLine1: "No. 38/6, Ground Floor, Bazaar Street",
   addressLine2: "Neelasandra, Bengaluru, Karnataka 560047",
   landmark: "Below Canara Bank · Opposite Mecca Masjid",
-  phone: "+91 72044 79211",
-  phoneRaw: "+917204479211",
+  phone: "+91 63666 49777",
+  phoneRaw: "+916366649777",
   landline: "+91 80 2553 3988",
   landlineRaw: "+918025533988",
-  whatsapp: "917204479211",
+  whatsapp: "916366649777",
   hoursWeek: "Monday – Saturday · 9:00 AM – 10:00 PM",
   hoursSun: "Sunday · 9:00 AM – 9:00 PM",
-  hoursShort: "Open 7 days · hours vary by day",
+  hoursShort: "Open 7 days · hours vary",
   rating: "4.9",
   reviews: "1,100+",
-  reviewSource: "Justdial current listing",
+  reviewSource: "Current public listings",
   reviewCountVerified: "1,186",
   maps: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
   reviewsUrl: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
@@ -69,9 +69,9 @@ export const clinic = {
 export const navLinks: { id: PageId; label: string }[] = [
   { id: "home", label: "Home" },
   { id: "treatments", label: "Treatments" },
-  { id: "team", label: "Our doctors" },
-  { id: "about", label: "About us" },
-  { id: "gallery", label: "Clinic" },
+  { id: "team", label: "Doctors" },
+  { id: "about", label: "About" },
+  { id: "gallery", label: "Our clinic" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -82,10 +82,10 @@ export const heroStats = [
 ];
 
 export const trustPoints = [
-  { n: "01", title: "Open 7 days*", text: "Current listings show the clinic operating seven days; confirm today's hours before visiting." },
-  { n: "02", title: "4.9★ rating", text: "The current public listing shows a 4.9 rating from 1,186 ratings across the web." },
-  { n: "03", title: "Clear treatment options", text: "The clinic offers general, cosmetic, surgical, orthodontic and children's dental services." },
-  { n: "04", title: "Multidisciplinary care", text: "Public listings identify multiple dental professionals and specialist services at the clinic." },
+  { n: "01", title: "Open 7 days", text: "Current public listings show the clinic operating seven days; confirm today's hours and availability before visiting." },
+  { n: "02", title: "4.9★ rating", text: "Current public listings show a 4.9 rating and 1,100+ patient ratings for the clinic." },
+  { n: "03", title: "Clear treatment options", text: "Public listings describe general, cosmetic, surgical, orthodontic and children's dental services." },
+  { n: "04", title: "Multidisciplinary care", text: "Public listings identify a dental team and a broad range of specialist services at the clinic." },
 ];
 
 export const promises = [
@@ -262,7 +262,7 @@ export const reviews = [
   { n: "01", title: "Welcoming and efficient", text: "Dr. Lohit and his team are always welcoming and efficient. Provides exceptional care and makes every visit stress free.", name: "Sudhanshu Purohit", meta: "Public review · 10 Sep 2024" },
   { n: "02", title: "Clear explanations", text: "Dr. Lohit Thapliyal was described as knowledgeable, kind and considerate, with treatment explained in understandable terms.", name: "Nusrath Sheriff", meta: "Public review · 13 Oct 2022" },
   { n: "03", title: "Reasonable prices", text: "A public review described the treatment as good care at a reasonable price and specifically praised Dr. Ankita Roy.", name: "Sabiha Farrukh", meta: "Public review · 10 Apr 2021" },
-  { n: "04", title: "See current reviews", text: "Public listings currently show a 4.9 rating and 1,186 ratings for the clinic. Reviews include both positive and critical experiences.", name: "Current public listing", meta: "4.9 · 1,186 ratings" },
+  { n: "04", title: "See current reviews", text: "Public listings currently show a 4.9 rating and 1,186 ratings for the clinic. Reviews include both positive and critical experiences.", name: "Current public listings", meta: "4.9 · 1,100+ ratings" },
 ];
 
 export const faqs = [

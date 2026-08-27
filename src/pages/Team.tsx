@@ -12,12 +12,10 @@ export default function Team() {
         <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
           <Eyebrow light>Our doctors</Eyebrow>
           <Heading light className="mt-4 max-w-3xl">
-            A full panel of dentists, not just one chair.
+            A dental team with a broad range of treatment experience.
           </Heading>
           <p className="mt-4 max-w-2xl text-white/70">
-            Root canals, implants, braces, gum surgery and children's dentistry
-            are each handled by a doctor who does that work every day — which is
-            why complicated cases can stay inside the same clinic.
+            Public listings describe a multidisciplinary clinic offering general, restorative, surgical, orthodontic and children's dental services.
           </p>
         </div>
       </section>

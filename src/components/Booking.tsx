@@ -98,7 +98,7 @@ export default function Booking({
                   Appointment request
                 </p>
                 <h3 id="booking-title" className="mt-1 text-2xl font-extrabold">
-                  {done ? "Send it on WhatsApp" : "Book your visit"}
+                  {done ? "Send it on WhatsApp" : "Request an appointment"}
                 </h3>
               </div>
               <button
@@ -269,7 +269,7 @@ export default function Booking({
                         disabled={!name || !phone || !date}
                         className="rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white disabled:opacity-40"
                       >
-                        Send on WhatsApp
+                        Continue on WhatsApp
                       </button>
                     )}
                   </div>

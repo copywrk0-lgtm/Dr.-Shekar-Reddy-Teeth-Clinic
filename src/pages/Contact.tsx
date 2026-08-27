@@ -77,11 +77,11 @@ export default function Contact() {
                 <br />
                 {clinic.hoursSun}
                 <br />
-                <span className="text-ink/50">Walk-ins welcome through the day</span>
+                <span className="text-ink/50">Call ahead to check today's availability</span>
               </span>
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Btn onClick={openBook}>Book an appointment</Btn>
+              <Btn onClick={openBook}>Request an appointment</Btn>
               <Btn variant="outline" href={`tel:${clinic.phoneRaw}`}>
                 <Phone size={15} /> Call now
               </Btn>
