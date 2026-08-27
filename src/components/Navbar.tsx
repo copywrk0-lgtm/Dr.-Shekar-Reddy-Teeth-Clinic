@@ -6,20 +6,13 @@ import { clinic, navLinks } from "../data";
 
 export default function Navbar() {
   const { page, go, openBook } = useNav();
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => setOpen(false), [page]);
 
-  const overHero = page === "home" && !scrolled;
-  const tone = overHero ? "text-white" : "text-ink";
+  const overHero = false;
+  const tone = "text-ink";
 
   return (
     <>
@@ -39,7 +32,7 @@ export default function Navbar() {
 
       <header
         className={`fixed inset-x-0 z-50 transition-all duration-300 lg:top-9 ${
-          scrolled ? "bg-white/95 shadow-sm backdrop-blur-md" : "bg-transparent"
+          "bg-white/95 shadow-sm backdrop-blur-md"
         }`}
       >
         <div className="mx-auto flex h-[70px] max-w-[1320px] items-center justify-between px-5 sm:px-6">
@@ -152,7 +145,7 @@ export default function Navbar() {
                     onClick={openBook}
                     className="flex-1 rounded-full bg-white py-3 text-sm font-semibold text-teal-deep"
                   >
-                    Book
+                    Request
                   </button>
                 </div>
               </div>

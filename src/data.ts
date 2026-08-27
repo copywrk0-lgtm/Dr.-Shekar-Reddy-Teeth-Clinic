@@ -6,6 +6,8 @@ export const img = (id: number, w = 1600) =>
 /** Photos of the clinic itself (recreated from the clinic's own photographs). */
 export const local = {
   room: "/images/clinic-room.jpg",
+  actualChair: "/images/actual/clinic-chair.jpg",
+  actualReception: "/images/actual/clinic-reception.jpg",
   treating: "/images/dentist-treating.jpg",
   lady: "/images/lady-dentist.jpg",
   reception: "/images/reception.jpg",
