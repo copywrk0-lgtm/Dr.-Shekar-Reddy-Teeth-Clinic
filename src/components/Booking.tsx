@@ -230,7 +230,7 @@ export default function Booking({
                         className="w-full resize-none rounded-xl border border-ink/12 px-4 py-3 text-sm"
                       />
                       <p className="rounded-xl bg-mint-soft px-4 py-3 text-xs text-ink/60">
-                        Walk-ins are also welcome. {clinic.hoursShort}.
+                        Appointments are available 7 days a week. {clinic.hoursShort}.
                       </p>
                     </div>
                   )}

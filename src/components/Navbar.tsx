@@ -98,7 +98,7 @@ export default function Navbar() {
               onClick={openBook}
               className="hidden rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-white hover:bg-teal-deep sm:inline-flex"
             >
-              Book appointment
+              Request appointment
             </button>
             <button
               type="button"

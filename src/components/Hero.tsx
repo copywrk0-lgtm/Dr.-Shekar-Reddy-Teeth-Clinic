@@ -58,7 +58,7 @@ export default function Hero() {
         playsInline
         preload="metadata"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/80 via-teal-ink/50 to-teal-deep/60" />
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/70 via-teal-ink/40 to-teal-deep/50" />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1320px] flex-col justify-center px-5 pb-10 pt-28 sm:px-6 lg:pt-32">
         <div className="grid items-center gap-10 lg:grid-cols-12">

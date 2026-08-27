@@ -59,7 +59,6 @@ export const clinic = {
   rating: "4.9",
   reviews: "1,100+",
   reviewSource: "Current public listings",
-  reviewCountVerified: "1,186",
   maps: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
   reviewsUrl: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
   mapEmbed:
@@ -78,7 +77,7 @@ export const navLinks: { id: PageId; label: string }[] = [
 export const heroStats = [
   { value: "4.9★", label: `${clinic.reviews} patient ratings` },
   { value: "7 days", label: "Open 7 days*" },
-  { value: "9–10", label: "Daytime & evening hours*" },
+  { value: "9 AM–10 PM", label: "Mon–Sat · Sunday 9 AM–9 PM*" },
 ];
 
 export const trustPoints = [
@@ -262,7 +261,7 @@ export const reviews = [
   { n: "01", title: "Welcoming and efficient", text: "Dr. Lohit and his team are always welcoming and efficient. Provides exceptional care and makes every visit stress free.", name: "Sudhanshu Purohit", meta: "Public review · 10 Sep 2024" },
   { n: "02", title: "Clear explanations", text: "Dr. Lohit Thapliyal was described as knowledgeable, kind and considerate, with treatment explained in understandable terms.", name: "Nusrath Sheriff", meta: "Public review · 13 Oct 2022" },
   { n: "03", title: "Reasonable prices", text: "A public review described the treatment as good care at a reasonable price and specifically praised Dr. Ankita Roy.", name: "Sabiha Farrukh", meta: "Public review · 10 Apr 2021" },
-  { n: "04", title: "See current reviews", text: "Public listings currently show a 4.9 rating and 1,186 ratings for the clinic. Reviews include both positive and critical experiences.", name: "Current public listings", meta: "4.9 · 1,100+ ratings" },
+  { n: "04", title: "See current reviews", text: "Current public listings show a 4.9 rating and 1,100+ patient ratings. Reviews include both positive and critical experiences.", name: "Current public listings", meta: "4.9 · 1,100+ ratings" },
 ];
 
 export const faqs = [

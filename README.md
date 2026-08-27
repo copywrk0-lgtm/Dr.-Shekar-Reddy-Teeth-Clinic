@@ -24,7 +24,7 @@ Set `VITE_APPS_SCRIPT_URL` to the deployed Google Apps Script Web App URL. Witho
 
 ## Verified public claims used
 
-The website uses a conservative `4.9★` / `1,100+ patient ratings` presentation. A current public Justdial listing shows 4.9 and 1,186 ratings for the clinic. The exact Google review count is intentionally not presented as Google-specific because it was not directly retrievable during verification.
+The website uses a conservative `4.9★` / `1,100+ patient ratings` presentation. The exact Google review count is intentionally not presented as Google-specific because it was not directly retrievable during verification.
 
 ## Client verification still required
 

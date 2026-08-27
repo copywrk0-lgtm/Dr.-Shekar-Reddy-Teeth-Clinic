@@ -338,8 +338,7 @@ export default function Home() {
           <div className="lg:col-span-7">
             <Heading light>Tooth paining? Come in today.</Heading>
             <p className="mt-4 max-w-lg text-white/80">
-              Walk in or call ahead — we are open from 9 in the morning until 10
-              at night, every day of the week.
+              Request an appointment or call ahead. Our clinic is open 7 days a week, with hours that vary by day.
             </p>
             <p className="mt-4 flex items-center gap-2 text-sm text-white/75">
               <MapPin size={16} /> {clinic.addressLine1}, {clinic.area} —{" "}
@@ -348,7 +347,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap gap-3 lg:col-span-5 lg:justify-end">
             <Btn variant="white" onClick={openBook}>
-              Book appointment
+              Request appointment
             </Btn>
             <a
               href={`tel:${clinic.phoneRaw}`}

@@ -14,7 +14,7 @@ export default function NotFound() {
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Btn onClick={() => go("home")}><Home size={15} /> Home</Btn>
           <Btn variant="outline" onClick={() => go("treatments")}><ArrowLeft size={15} /> Treatments</Btn>
-          <Btn variant="outline" onClick={openBook}>Book appointment</Btn>
+          <Btn variant="outline" onClick={openBook}>Request appointment</Btn>
         </div>
       </section>
     </main>
