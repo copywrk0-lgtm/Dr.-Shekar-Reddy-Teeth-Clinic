@@ -114,3 +114,15 @@ textarea {
 .prose-like h2 { font-size: 1.15rem; font-weight: 800; color: #0d1b1e; margin-bottom: .5rem; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid rgba(31,143,166,.45); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+
+.mobile-action-bar {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (max-width: 380px) {
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    font-size: 0.75rem;
+  }
+}

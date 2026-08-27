@@ -94,7 +94,7 @@ export const promises = [
 ];
 
 export const visitSteps = [
-  { n: "01", title: "Walk in or call", text: "Appointments can reduce waiting; call the clinic to check today's availability." },
+  { n: "01", title: "Call or request", text: "Appointments can reduce waiting; call the clinic to check today's availability." },
   { n: "02", title: "Check-up & assessment", text: "The dentist examines the problem and recommends imaging when clinically needed." },
   { n: "03", title: "Plan and cost", text: "Discuss the treatment options, expected visits and cost before deciding to proceed." },
   { n: "04", title: "Treatment & follow-up", text: "Your dentist will explain aftercare and whether a review visit is needed." },

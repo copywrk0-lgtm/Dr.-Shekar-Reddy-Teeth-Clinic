@@ -58,7 +58,7 @@ export default function Hero() {
         playsInline
         preload="metadata"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/70 via-teal-ink/40 to-teal-deep/50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-ink/65 via-teal-ink/35 to-teal-deep/45" />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1320px] flex-col justify-center px-5 pb-10 pt-28 sm:px-6 lg:pt-32">
         <div className="grid items-center gap-10 lg:grid-cols-12">
@@ -84,7 +84,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.7 }}
-              className="mt-6 text-[2.9rem] font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.6rem]"
+              className="mt-6 text-[2.55rem] font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-[4.6rem]"
             >
               Dental care that
               <br />
@@ -108,25 +108,25 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.42 }}
-              className="mt-8 flex flex-wrap gap-3"
+              className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap"
             >
               <button
                 type="button"
                 onClick={openBook}
-                className="rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-teal-deep shadow-lg transition hover:bg-mint"
+                className="col-span-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-teal-deep shadow-lg transition hover:bg-mint sm:col-span-auto"
               >
                 Request an appointment
               </button>
               <a
                 href={`tel:${clinic.phoneRaw}`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-4 py-3.5 text-sm font-semibold text-white hover:bg-white/10 sm:px-6"
               >
                 <Phone size={15} /> {clinic.phone}
               </a>
               <button
                 type="button"
                 onClick={() => go("treatments")}
-                className="rounded-full px-4 py-3.5 text-sm font-semibold text-white/80 underline-offset-4 hover:underline"
+                className="rounded-full px-3 py-3.5 text-sm font-semibold text-white/80 underline-offset-4 hover:underline sm:px-4"
               >
                 See treatments
               </button>

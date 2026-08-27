@@ -22,7 +22,7 @@ export default function About() {
           <p className="mt-5 max-w-2xl text-white/75">
             {clinic.name} sits on Bazaar Street, below Canara Bank and opposite
             Mecca Masjid. It is not a showroom — it is a working clinic where
-            people walk in with toothache and walk out able to eat again.
+            patients arrive with dental concerns and leave with a clearer plan for care.
           </p>
         </div>
       </section>
