@@ -5,7 +5,6 @@ type NavContextValue = {
   page: PageId;
   go: (page: PageId, hash?: string) => void;
   openBook: () => void;
-  goTreatment: (id: string) => void;
 };
 
 const NavContext = createContext<NavContextValue | null>(null);

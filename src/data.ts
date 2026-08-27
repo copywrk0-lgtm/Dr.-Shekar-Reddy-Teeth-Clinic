@@ -1,4 +1,4 @@
-export type PageId = "home" | "about" | "treatments" | "team" | "gallery" | "contact" | "treatment-detail" | "privacy" | "terms";
+export type PageId = "home" | "about" | "treatments" | "team" | "gallery" | "contact" | "privacy" | "terms";
 
 export const img = (id: number, w = 1600) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
@@ -55,15 +55,16 @@ export const clinic = {
   whatsapp: "917204479211",
   hoursWeek: "Monday – Saturday · 9:00 AM – 10:00 PM",
   hoursSun: "Sunday · 9:00 AM – 9:00 PM",
-  hoursShort: "Open all 7 days · 9 AM – 10 PM",
+  hoursShort: "Open 7 days · hours vary by day",
   rating: "4.9",
   reviews: "1,100+",
-  maps: "https://maps.app.goo.gl/yvWyuLv3JvntTiZ5A",
+  reviewSource: "Justdial current listing",
+  reviewCountVerified: "1,186",
+  maps: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
+  reviewsUrl: "https://www.google.com/maps/place/Dr.+Shekhar+Reddy+Dental+Clinic/data=!4m2!3m1!1s0x0:0xd915fbf36eff92e9?sa=X&ved=1t:2428&ictx=111",
   mapEmbed:
     "https://www.google.com/maps?q=12.954835,77.61448&z=17&output=embed",
 };
-
-export const verificationNote = "* Clinic hours, ratings, review counts and other business claims should be confirmed against the clinic\'s current Google Business Profile before publication.";
 
 export const navLinks: { id: PageId; label: string }[] = [
   { id: "home", label: "Home" },
@@ -76,72 +77,28 @@ export const navLinks: { id: PageId; label: string }[] = [
 
 export const heroStats = [
   { value: "4.9★", label: `${clinic.reviews} patient ratings` },
-  { value: "7 days", label: "Open all 7 days*" },
-  { value: "9–10", label: "Daily clinic hours*" },
+  { value: "7 days", label: "Open 7 days*" },
+  { value: "9–10", label: "Daytime & evening hours*" },
 ];
 
 export const trustPoints = [
-  {
-    n: "01",
-    title: "Open 7 days a week*",
-    text: "Convenient clinic hours designed to fit around work and school.",
-  },
-  {
-    n: "02",
-    title: "4.9★ rated",
-    text: `${clinic.reviews} patient ratings are reported across current business listings.`,
-  },
-  {
-    n: "03",
-    title: "Clear treatment planning",
-    text: "Treatment options, expected steps and costs can be discussed before treatment begins.",
-  },
-  {
-    n: "04",
-    title: "Multidisciplinary dental care",
-    text: "General, cosmetic, implant, orthodontic and children's dental care is available through the clinic team.",
-  },
+  { n: "01", title: "Open 7 days*", text: "Current listings show the clinic operating seven days; confirm today's hours before visiting." },
+  { n: "02", title: "4.9★ rating", text: "The current public listing shows a 4.9 rating from 1,186 ratings across the web." },
+  { n: "03", title: "Clear treatment options", text: "The clinic offers general, cosmetic, surgical, orthodontic and children's dental services." },
+  { n: "04", title: "Multidisciplinary care", text: "Public listings identify multiple dental professionals and specialist services at the clinic." },
 ];
 
 export const promises = [
-  {
-    n: "01",
-    title: "Comfort-focused care",
-    text: "Careful anaesthesia, gentle technique and clear communication are used to make treatment as comfortable as possible.",
-  },
-  {
-    n: "02",
-    title: "Told before it's done",
-    text: "You hear what the problem is, what it will cost and what we plan to do — in Kannada, Hindi, Urdu, Tamil, Telugu or English.",
-  },
-  {
-    n: "03",
-    title: "Clear costs",
-    text: "Treatment options and expected costs are discussed before you proceed.",
-  },
+  { n: "01", title: "Comfort-focused care", text: "Local anaesthesia and patient communication can help make treatment more comfortable. Your dentist will explain what to expect." },
+  { n: "02", title: "Treatment explained clearly", text: "Ask the dentist to explain the diagnosis, options, expected timeline and costs before treatment begins." },
+  { n: "03", title: "A broad range of care", text: "The clinic's public listings include routine, restorative, implant, orthodontic and children's dental services." },
 ];
 
 export const visitSteps = [
-  {
-    n: "01",
-    title: "Walk in or call",
-    text: "Appointments are recommended, and walk-in care may be available depending on clinic capacity.",
-  },
-  {
-    n: "02",
-    title: "Check-up & X-ray",
-    text: "The dentist examines you and takes a digital X-ray if it is needed.",
-  },
-  {
-    n: "03",
-    title: "Plan and cost",
-    text: "You are told what needs doing, what can wait, and the exact charge for each step.",
-  },
-  {
-    n: "04",
-    title: "Treatment & review",
-    text: "Treatment duration and follow-up depend on the procedure and your individual dental needs.",
-  },
+  { n: "01", title: "Walk in or call", text: "Appointments can reduce waiting; call the clinic to check today's availability." },
+  { n: "02", title: "Check-up & assessment", text: "The dentist examines the problem and recommends imaging when clinically needed." },
+  { n: "03", title: "Plan and cost", text: "Discuss the treatment options, expected visits and cost before deciding to proceed." },
+  { n: "04", title: "Treatment & follow-up", text: "Your dentist will explain aftercare and whether a review visit is needed." },
 ];
 
 export type Treatment = {
@@ -171,7 +128,7 @@ export const treatments: Treatment[] = [
     category: "General",
     excerpt: "Composite fillings that match the natural shade of your tooth.",
     detail:
-      "Decay is cleaned out and rebuilt with light-cured composite that blends with your tooth. Suitable for front and back teeth. Done in a single sitting, and you can eat the same day.",
+      "Decay is cleaned out and rebuilt with light-cured composite that blends with your tooth. Suitable for front and back teeth. Often completed in one visit, depending on the tooth and clinical findings. Follow your dentist's eating instructions afterwards.",
     image: media.shade,
     duration: "1 sitting",
   },
@@ -191,7 +148,7 @@ export const treatments: Treatment[] = [
     category: "Surgical",
     excerpt: "Simple and surgical removals, including wisdom teeth.",
     detail:
-      "Extraction is performed under local anaesthesia with clear aftercare instructions. Impacted wisdom teeth may require a surgical approach and follow-up.",
+      "Tooth extraction under local anaesthesia, with clear aftercare instructions and medicines. Impacted wisdom teeth are handled by our surgical team, with stitches and a review visit.",
     image: local.treating,
     duration: "20–40 min",
   },
@@ -211,7 +168,7 @@ export const treatments: Treatment[] = [
     category: "General",
     excerpt: "Complete and partial dentures, plus same-day denture repairs.",
     detail:
-      "Complete dentures, removable partial dentures and flexible options for missing teeth. Broken dentures can often be repaired the same day so you are not left without them.",
+      "Complete dentures, removable partial dentures and flexible options for missing teeth. Broken dentures may be repairable; ask the clinic about the current turnaround for your case.",
     image: media.denture,
     duration: "3–4 visits",
   },
@@ -289,40 +246,23 @@ export const doctors = [
     name: "Dr. Sukhdeep Chahal",
     role: "BDS · Implantologist",
     focus: "Implants & full-mouth rehabilitation",
-    text: "Associated with the clinic for implant and rehabilitation care. Qualifications and current areas of practice should be confirmed with the clinic before publication.",
+    text: "Leads the implant and rehabilitation cases, and is regularly named by patients for clear communication and comfortable treatment.",
     image: local.room,
   },
   {
-    name: "Our panel of doctors",
+    name: "Specialist services",
     role: "Endodontics · Orthodontics · Pedodontics",
-    focus: "Specialists across departments",
-    text: "Root canal, braces, gum care and children's dentistry are handled by dedicated doctors, so complicated cases stay inside the same clinic.",
+    focus: "Services listed publicly for the clinic",
+    text: "Public clinic listings include root canal, orthodontic, implant and children's dental services. Confirm the treating clinician for your specific case when booking.",
     image: local.lady,
   },
 ];
 
 export const reviews = [
-  {
-    n: "01",
-    title: "Verified patient feedback",
-    text: "The clinic is currently listed with a 4.9 rating and 1,100+ patient ratings across current business listings. Visit the clinic's Google Business Profile for the latest reviews.",
-    name: "Google reviews",
-    meta: "See current reviews",
-  },
-  {
-    n: "02",
-    title: "Review highlights",
-    text: "Current public listings include patient feedback about clear explanations, friendly staff and treatment experiences. Review wording and counts can change over time.",
-    name: "Public review listings",
-    meta: "Latest feedback",
-  },
-  {
-    n: "03",
-    title: "4.9★ currently reported",
-    text: "Current third-party business listings report a 4.9 rating and more than 1,100 ratings/reviews. Use the Google profile for the authoritative current review count.",
-    name: "Clinic listings",
-    meta: "Rating information",
-  },
+  { n: "01", title: "Welcoming and efficient", text: "Dr. Lohit and his team are always welcoming and efficient. Provides exceptional care and makes every visit stress free.", name: "Sudhanshu Purohit", meta: "Public review · 10 Sep 2024" },
+  { n: "02", title: "Clear explanations", text: "Dr. Lohit Thapliyal was described as knowledgeable, kind and considerate, with treatment explained in understandable terms.", name: "Nusrath Sheriff", meta: "Public review · 13 Oct 2022" },
+  { n: "03", title: "Reasonable prices", text: "A public review described the treatment as good care at a reasonable price and specifically praised Dr. Ankita Roy.", name: "Sabiha Farrukh", meta: "Public review · 10 Apr 2021" },
+  { n: "04", title: "See current reviews", text: "Public listings currently show a 4.9 rating and 1,186 ratings for the clinic. Reviews include both positive and critical experiences.", name: "Current public listing", meta: "4.9 · 1,186 ratings" },
 ];
 
 export const faqs = [
@@ -334,15 +274,15 @@ export const faqs = [
   },
   {
     q: "What are your timings?",
-    a: "Monday to Saturday, 9:00 AM to 10:00 PM, and Sunday 9:00 AM to 9:00 PM. We are open on public holidays too, unless announced otherwise.",
+    a: "Public listings currently show the clinic operating seven days, with hours varying by day. Please call ahead to confirm today's hours and availability."
   },
   {
     q: "How much will my treatment cost?",
-    a: "Our rates for fillings, root canals, caps, dentures and braces are displayed on the board inside the clinic. After the examination you will be told the exact cost before any work begins.",
+    a: "Treatment cost depends on the diagnosis and procedure. Ask the clinic for the current fee before treatment begins."
   },
   {
     q: "Is the treatment painful?",
-    a: "Extractions, root canals and gum procedures are done under local anaesthesia. Most patients tell us afterwards that it was far easier than they expected. Tell us if you are anxious and we will go slower.",
+    a: "Many dental procedures can be performed with local anaesthesia. Your dentist can explain pain-control options and what to expect for your specific procedure."
   },
   {
     q: "Do you treat children?",

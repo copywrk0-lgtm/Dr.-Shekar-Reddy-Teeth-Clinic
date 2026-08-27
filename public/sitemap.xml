@@ -4,6 +4,18 @@
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/about</loc></url>
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments</loc></url>
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/team</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/checkup</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/filling</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/rct</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/extraction</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/caps</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/dentures</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/implants</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/gums</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/braces</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/whitening</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/smile</loc></url>
+  <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/treatments/kids</loc></url>
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/gallery</loc></url>
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/contact</loc></url>
   <url><loc>https://YOUR-PRODUCTION-DOMAIN.example/privacy</loc></url>

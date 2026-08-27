@@ -91,9 +91,17 @@ export default function Footer() {
                     {l.label}
                   </button>
                 ))}
-                <a href={clinic.maps} target="_blank" rel="noreferrer" className="w-fit text-sm text-white/75 hover:text-white">Get directions ↗</a>
-                <a href="/privacy" className="w-fit text-sm text-white/75 hover:text-white">Privacy</a>
-                <a href="/terms" className="w-fit text-sm text-white/75 hover:text-white">Terms</a>
+                <button type="button" onClick={() => go("privacy")} className="w-fit text-sm text-white/75 hover:text-white">Privacy</button>
+                <button type="button" onClick={() => go("terms")} className="w-fit text-sm text-white/75 hover:text-white">Terms</button>
+                <a href={clinic.reviewsUrl} target="_blank" rel="noreferrer" className="w-fit text-sm text-white/75 hover:text-white">See current reviews ↗</a>
+                <a
+                  href={clinic.maps}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-fit text-sm text-white/75 hover:text-white"
+                >
+                  Get directions ↗
+                </a>
               </div>
             </div>
           </div>

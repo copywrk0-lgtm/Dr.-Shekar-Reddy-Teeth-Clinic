@@ -100,7 +100,7 @@ export default function Home() {
                 "All departments in one clinic — no running around the city",
                 "Digital X-rays taken and read on the spot",
                 "Sterilised instruments for every patient",
-                "Emergency toothache seen the same day",
+                "Emergency toothache enquiries",
               ].map((p) => (
                 <p key={p} className="flex items-start gap-3 text-sm text-ink/75">
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint text-teal-deep">
@@ -179,7 +179,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-[1320px] px-5 sm:px-6">
           <Eyebrow light>Why patients stay with us</Eyebrow>
           <Heading light className="mt-4 max-w-2xl">
-            Painless, explained, and priced before we start.
+            Comfort-focused, explained, and discussed before treatment.
           </Heading>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {promises.map((p) => (
@@ -201,7 +201,7 @@ export default function Home() {
               <p className="text-sm text-white/60">patient ratings</p>
             </div>
             <div>
-              <p className="text-3xl font-extrabold sm:text-4xl">4.8★</p>
+              <p className="text-3xl font-extrabold sm:text-4xl">{clinic.rating}★</p>
               <p className="text-sm text-white/60">average rating</p>
             </div>
             <div>
@@ -236,13 +236,13 @@ export default function Home() {
             <div className="lg:col-span-5">
               <Eyebrow>Patient reviews</Eyebrow>
               <Heading className="mt-4">
-                Rated <span className="text-teal">4.8★</span> by over 1,100
+                Rated <span className="text-teal">{clinic.rating}★</span> by over 1,100
                 patients.
               </Heading>
               <p className="mt-4 text-ink/65">
-                Most of our patients come from a neighbour's recommendation.
-                Here is what they mention most often.
+                Public reviews highlight welcoming staff, clear explanations and comfortable care. Read the current listing before making a decision.
               </p>
+              <a href={clinic.reviewsUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex text-sm font-bold text-teal hover:underline">See current public reviews ↗</a>
               <div className="mt-6 flex gap-2">
                 {reviews.map((r, i) => (
                   <button

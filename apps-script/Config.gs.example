@@ -1,0 +1,4 @@
+// Copy this file to Config.gs in Apps Script and fill in your values.
+var SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
+var SHEET_NAME = 'Leads';
+var NOTIFY_EMAIL = 'clinic@example.com';

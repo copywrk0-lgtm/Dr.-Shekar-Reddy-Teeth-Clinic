@@ -1,0 +1,9 @@
+{
+  "name": "Dr. Shekar Reddy Teeth Clinic",
+  "short_name": "Shekar Reddy Dental",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f8f8",
+  "theme_color": "#0e6b6b",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

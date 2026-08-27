@@ -1,0 +1,22 @@
+# Launch QA checklist
+
+- [ ] `npm run check` passes
+- [ ] Home loads on fresh deployment
+- [ ] `/about`, `/treatments`, `/team`, `/gallery`, `/contact` load directly
+- [ ] Every treatment URL loads directly
+- [ ] Unknown URL shows custom 404
+- [ ] Browser back/forward works
+- [ ] Booking modal opens/closes with mouse and Escape
+- [ ] Booking validates name, phone and date
+- [ ] WhatsApp message contains submitted details
+- [ ] Apps Script lead row is created when configured
+- [ ] Phone links work on mobile
+- [ ] Google Maps link works
+- [ ] Google review link points to the clinic's verified profile
+- [ ] Privacy and Terms pages load
+- [ ] Keyboard focus is visible
+- [ ] Reduced motion works
+- [ ] 320/375/390/430/768/1024/1440 widths checked in a real browser
+- [ ] Core Web Vitals checked on a production URL
+- [ ] Sitemap uses the real production domain
+- [ ] All clinic claims and doctor credentials are approved by the owner

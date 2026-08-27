@@ -89,7 +89,7 @@ export default function About() {
               </p>
             </div>
             <div className="rounded-2xl bg-mint-soft p-7">
-              <p className="text-4xl font-extrabold text-teal">4.8★</p>
+              <p className="text-4xl font-extrabold text-teal">{clinic.rating}★</p>
               <p className="mt-2 text-sm font-semibold text-ink/60">
                 average patient rating
               </p>
@@ -97,7 +97,7 @@ export default function About() {
             <div className="rounded-2xl bg-mint-soft p-7">
               <p className="text-4xl font-extrabold text-teal">13 hrs</p>
               <p className="mt-2 text-sm font-semibold text-ink/60">
-                open every day, 9 AM – 10 PM
+                public listings show 7-day operation*
               </p>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function About() {
         <Heading className="mt-4">Three things we do not compromise on.</Heading>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {promises.map((p) => (
-            <article key={p.n} className="reveal-card rounded-2xl border border-line bg-white p-7">
+            <article key={p.n} className="rounded-2xl border border-line bg-white p-7">
               <p className="text-3xl font-extrabold text-mint">{p.n}</p>
               <h3 className="mt-4 text-xl font-extrabold">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/65">{p.text}</p>
@@ -124,7 +124,7 @@ export default function About() {
           <Heading className="mt-4">What happens when you come in.</Heading>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {visitSteps.map((s) => (
-              <article key={s.n} className="reveal-card rounded-2xl bg-white p-6">
+              <article key={s.n} className="rounded-2xl bg-white p-6">
                 <p className="text-3xl font-extrabold text-mint">{s.n}</p>
                 <h3 className="mt-3 text-lg font-extrabold">{s.title}</h3>
                 <p className="mt-2 text-sm text-ink/60">{s.text}</p>

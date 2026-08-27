@@ -47,7 +47,7 @@ export default function Team() {
       <section className="bg-white py-14">
         <div className="mx-auto max-w-[1320px] px-5 sm:px-6">
           <Eyebrow>What patients say about our doctors</Eyebrow>
-          <Heading className="mt-4">A trusted local dental team.</Heading>
+          <Heading className="mt-4">Named again and again in reviews.</Heading>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {reviews.map((r) => (
               <article key={r.n} className="rounded-2xl bg-paper p-6">

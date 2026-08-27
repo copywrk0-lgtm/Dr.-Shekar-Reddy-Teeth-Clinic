@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Phone, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { track } from "../analytics";
 import { clinic, visitReasons } from "../data";
 
 const steps = ["Reason", "When", "Your details"];
@@ -20,6 +21,16 @@ export default function Booking({
   const [phone, setPhone] = useState("");
   const [note, setNote] = useState("");
   const [done, setDone] = useState(false);
+  const [error, setError] = useState("");
+  const dialogRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
+    document.addEventListener("keydown", onKey);
+    window.setTimeout(() => dialogRef.current?.focus(), 0);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const close = () => {
     onClose();
@@ -33,11 +44,24 @@ export default function Booking({
     }, 300);
   };
 
-  const send = () => {
+  const send = async () => {
+    setError("");
+    const digits = phone.replace(/\D/g, "");
+    if (name.trim().length < 2) return setError("Please enter your name.");
+    if (!(digits.length === 10 || (digits.length === 12 && digits.startsWith("91")))) return setError("Please enter a valid Indian mobile number.");
+    if (!date) return setError("Please choose a preferred day.");
+    const selected = new Date(`${date}T00:00:00`);
+    if (Number.isNaN(selected.getTime()) || selected < new Date(new Date().toDateString())) return setError("Please choose today or a future date.");
+    const payload = { name: name.trim(), phone: phone.trim(), reason, date, time, note: note.trim(), source: "website", page: window.location.pathname };
+    const endpoint = import.meta.env.VITE_APPS_SCRIPT_URL as string | undefined;
+    if (endpoint) {
+      try { await fetch(endpoint, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) }); } catch { /* WhatsApp remains the fallback */ }
+    }
     const text = encodeURIComponent(
       `Hello Dr. Shekar Reddy Teeth Clinic, I would like to book an appointment.\nName: ${name}\nPhone: ${phone}\nReason: ${reason}\nPreferred day: ${date || "any day"}\nPreferred time: ${time}\nNote: ${note || "-"}`
     );
     window.open(`https://wa.me/${clinic.whatsapp}?text=${text}`, "_blank");
+    track("booking_whatsapp", { reason });
     setDone(true);
   };
 
@@ -57,6 +81,11 @@ export default function Booking({
             onClick={close}
           />
           <motion.div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="booking-title"
+            tabIndex={-1}
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 24, opacity: 0 }}
@@ -68,7 +97,7 @@ export default function Booking({
                 <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal">
                   Appointment request
                 </p>
-                <h3 className="mt-1 text-2xl font-extrabold">
+                <h3 id="booking-title" className="mt-1 text-2xl font-extrabold">
                   {done ? "Send it on WhatsApp" : "Book your visit"}
                 </h3>
               </div>
@@ -207,6 +236,8 @@ export default function Booking({
                   )}
                 </div>
 
+                {error && <p role="alert" className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-xs font-medium text-red-700">{error}</p>}
+
                 <div className="mt-6 flex items-center justify-between gap-3">
                   <button
                     type="button"
@@ -226,7 +257,7 @@ export default function Booking({
                     {step < 2 ? (
                       <button
                         type="button"
-                        onClick={() => setStep((s) => s + 1)}
+                        onClick={() => { track("booking_continue", { step: String(step + 1) }); setStep((s) => s + 1); }}
                         className="rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white"
                       >
                         Continue
@@ -235,7 +266,7 @@ export default function Booking({
                       <button
                         type="button"
                         onClick={send}
-                        disabled={!name || !phone}
+                        disabled={!name || !phone || !date}
                         className="rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white disabled:opacity-40"
                       >
                         Send on WhatsApp

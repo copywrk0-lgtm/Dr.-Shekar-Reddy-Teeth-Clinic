@@ -1,0 +1,5 @@
+TEAM
+Dr. Shekar Reddy Teeth Clinic website project
+
+TECHNOLOGY
+React · Vite · TypeScript · Tailwind CSS · Framer Motion

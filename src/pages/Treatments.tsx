@@ -1,15 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { Phone, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Btn, Eyebrow, Heading } from "../components/ui";
 import { useNav } from "../context";
-import { clinic, treatments } from "../data";
+import { clinic, treatments, type Treatment } from "../data";
 
 const filters = ["All", "General", "Cosmetic", "Surgical", "Braces", "Kids"] as const;
 
 export default function Treatments() {
-  const { openBook, goTreatment } = useNav();
+  const { openBook } = useNav();
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
+  const [active, setActive] = useState<Treatment | null>(null);
 
   const list = useMemo(
     () => (filter === "All" ? treatments : treatments.filter((t) => t.category === filter)),
@@ -55,7 +56,7 @@ export default function Treatments() {
                 layout
                 key={t.id}
                 type="button"
-                onClick={() => goTreatment(t.id)}
+                onClick={() => setActive(t)}
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
@@ -95,7 +96,63 @@ export default function Treatments() {
         </div>
       </section>
 
-
+      <AnimatePresence>
+        {active && (
+          <motion.div
+            className="fixed inset-0 z-[60] flex items-end justify-center sm:items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <button
+              type="button"
+              aria-label="Close"
+              className="absolute inset-0 bg-teal-ink/60 backdrop-blur-sm"
+              onClick={() => setActive(null)}
+            />
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              className="relative z-10 max-h-[90svh] w-full overflow-y-auto rounded-t-3xl bg-white sm:max-w-xl sm:rounded-3xl"
+            >
+              <div className="relative">
+                <img src={active.image} alt="" className="h-52 w-full object-cover" />
+                <button
+                  type="button"
+                  onClick={() => setActive(null)}
+                  className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full bg-white/90"
+                >
+                  <X size={16} />
+                </button>
+              </div>
+              <div className="p-6 sm:p-7">
+                <span className="rounded-full bg-mint px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-teal-deep">
+                  {active.category}
+                </span>
+                <h3 className="mt-3 text-2xl font-extrabold">{active.title}</h3>
+                <p className="mt-3 leading-relaxed text-ink/70">{active.detail}</p>
+                <p className="mt-4 text-sm font-semibold text-teal">
+                  Usual time needed: {active.duration}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Btn
+                    onClick={() => {
+                      setActive(null);
+                      openBook();
+                    }}
+                  >
+                    Book this treatment
+                  </Btn>
+                  <Btn variant="outline" href={`tel:${clinic.phoneRaw}`}>
+                    <Phone size={15} /> Ask about cost
+                  </Btn>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
